@@ -1,10 +1,12 @@
 from urllib.parse import urlparse, unquote
 import httpx
 import time
-
-PHOTO_TYPES = {'.jpg', '.jpeg', '.png', '.gif', '.webp', '.bmp', '.tiff'}
-VIDEO_TYPES = {'.mp4', '.avi', '.mov', '.mkv', '.webm', '.m4v', '.3gp'}
-AUDIO_TYPES = {'.mp3', '.wav', '.flac', '.ogg', '.aac', '.m4a', '.wma'}
+from utils.constants import (
+    PHOTO_TYPES, 
+    VIDEO_TYPES, 
+    AUDIO_TYPES
+)
+from utils.utils import logger
 
 class FileUploadBot:
     def __init__(self):
